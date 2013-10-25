@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+	
+    <title>Peez</title>
+    
+     <link rel="stylesheet" type="text/css" href="css/fonts/Comforta/Comfortaa.woff" media="screen">
+     <link rel="stylesheet" type="text/css" href="css/fonts/Roboto/Roboto-Regular-webfont.woff" media="screen">
+        
+     <link rel="stylesheet" type="text/css" href="css/login.css" media="screen">
+    
+        <script type="text/javascript" language="javascript" src="jquery-1.7.1.min.js"></script>
+                
+        <script type="text/javascript" language="javascript" src="peez-crudM.js"></script>
+		
+		<script type="text/javascript" language="javascript" src="peez-crud.chirp.js"></script>
+		
+		<script type="text/javascript" language="javascript" src="peez-objects.js"></script>
+		<script type="text/javascript" language="javascript" src="peez-enums.js"></script>    
+    
+	<script src="cordova.js"></script>
+    <script>
+		function init()
+		{
+			document.addEventListener("deviceready", onDeviceReady, false);	
+		}
+		
+		function onDeviceReady()
+		{
+			alert("OK");
+			login();	
+		}
+		
+			//verifica credenziali
+			function login()
+			{
+				people.nick = "luca.maroccia";
+				people.pw = "netluke29";
+				
+				people_login(people, main_people_refresh, main_people_FAIL);				
+			}
+			
+			//aggiornamento (iniziale) del people in uso e del profile view
+			function main_people_refresh(crud_result) {
+
+				//si autorichiama nel caso in cui non sia definito il people
+				if (people.id === undefined && crud_result === undefined) { return people_retrieve(main_people_refresh); }
+				
+				if (crud_result !== undefined) { 
+				
+					people = JSON.parse(crud_result.JSON); 
+					
+					alert(people.token);}
+				
+				
+				//instanzio la view (people_view_32)
+
+
+				return true;
+			}
+			
+			function main_people_FAIL(xhr, ajaxOptions, thrownError){
+				
+				alert("PROBLEMA!");
+			
+			}
+		
+	</script>
+</head>
+    
+    <body class="bcScuro" onLoad="init()">
+    	
+        <header class="hdrCentrato">        
+            <div>        
+                <img src="Images/peez_mega.png" alt="Peez" />        
+				<br>
+                <h1 class="fontPeez">peez</h1>        
+            </div>                  
+        </header>
+
+        <div class="login">
+            <form action="" method="post">
+                <p>
+                    <label for="username">Username</label>
+                    <br />
+                    <input type="text" name="username" id="username" />
+                </p>
+                <p>
+                    <label for="password">Password</label>
+                    <br />
+                    <input type="password" name="password" id="password" />
+                </p>
+                <p>
+                	<br>
+                    <a href="javascript:login();">LOGIN</a>
+                	<!-- <input type="submit" id="login" value="LOGIN" onClick="login()"/> --> 
+                </p>
+            </form>            	
+        </div>
+        
+
+    </body>
+</html>
