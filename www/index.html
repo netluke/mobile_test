@@ -8,47 +8,36 @@
     <title>Peez</title>
 
     <!-- Tema JQuery Mobile -->
-    <link rel="stylesheet" href="css/themes/default/peez_one.min.css"> <!-- jquery.mobile-1.3.1.css-->
-    <link rel="stylesheet" href="css/themes/default/jquery.mobile.structure-1.3.1.min.css">    
+    <link rel="stylesheet" href="tools/css/themes/default/peez_one.min.css"> <!-- jquery.mobile-1.3.1.css-->
+    <link rel="stylesheet" href="tools/css/themes/default/jquery.mobile.structure-1.3.1.min.css">    
     
     <!-- Font -->
-    <link rel="stylesheet" href="css/fonts/Comforta/Comfortaa.woff">
-    <link rel="stylesheet" href="css/fonts/Roboto/Roboto-Regular-webfont.woff">
+    <link rel="stylesheet" href="tools/css/fonts/Comforta/Comfortaa-Bold.ttf">
+    <link rel="stylesheet" href="tools/css/fonts/Roboto/Roboto-Regular-webfont.ttf">
 
     <!-- Impaginazione con media query. -->
-    <link rel="stylesheet" media="only screen and (orientation:portrait)" href="css/login_portrait.css">
-    <link rel="stylesheet" media="only screen and (orientation:landscape)" href="css/login_landscape.css">
+    <link rel="stylesheet" media="all and (orientation:portrait)" href="tools/css/login_portrait.css">
+    <link rel="stylesheet" media="all and (orientation:landscape)" href="tools/css/login_landscape.css">
 
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.mobile-1.3.1.js"></script>
-    <script src="js/fastButton.js"></script>
+    <script src="tools/js/jquery.js"></script>
+    <script src="tools/js/jquery.mobile-1.3.1.js"></script>
+    <script src="tools/js/fastButton.js"></script>
     
-	<script src="js/cordova.android.js"></script>
-    <script>
-		function init()
-		{
-			document.addEventListener("deviceready", onDeviceReady, false);	
-		}
-		
-		function onDeviceReady()
-		{
-			alert("OK");	
-		}
-	</script>
-    <script src="js/login.js"></script>
-    
+	<script src="phonegap.js"></script>
+
+    <script src="tools/js/login.js"></script>
 </head>
 
     <body onLoad="init()">
     
         <!-- Login - Namespace: login -->
         <div data-role="page" data-theme="a">
-                <img class="login_qr" src="img/qr/qr1.jpeg" width="48" height="48" id="login_qr_catch" style="cursor:pointer">
+                <img class="login_qr" src="tools/img/qr/qr1.jpeg" width="48" height="48" id="login_qr_catch" style="cursor:pointer">
                 
                 <header data-role="header" data-theme="a" class="login_header">        
                     <div>
                         <div class="login_header_img"></div>    
-                        <!-- <img src="img/peez_mega.png" alt="peez" class="login_header_img" /> -->      
+                        <!-- <img src="tools/img/peez_mega.png" alt="peez" class="login_header_img" /> -->      
                         <!-- <br /> -->
                         <div class="login_header_font"><h1>peez</h1></div>
                     </div>                  
@@ -72,34 +61,16 @@
                 </div>
                 
                 <div data-role="footer" data-theme="a" class="login_footer">
-                    <img src="img/Socialicons/facebook.png" width="32" height="32" id="login_footer_facebook" style="cursor:pointer">
-                    <img src="img/Socialicons/twitter.png" width="32" height="32" id="login_footer_twitter" style="cursor:pointer">
-                    <img src="img/Socialicons/google-plus.png" width="32" height="32" id="login_footer_google" style="cursor:pointer">
-                    <img src="img/Socialicons/linkedin.png" width="32" height="32" id="login_footer_linkedin" style="cursor:pointer">                      
+                    <img src="tools/img/Socialicons/linkedin.png" width="32" height="32" id="login_footer_linkedin" style="cursor:pointer">
+                    <img src="tools/img/Socialicons/twitter.png" width="32" height="32" id="login_footer_twitter" style="cursor:pointer">
+                    <img src="tools/img/Socialicons/facebook.png" width="32" height="32" id="login_footer_facebook" style="cursor:pointer">
+                    <img src="tools/img/Socialicons/google-plus.png" width="32" height="32" id="login_footer_google" style="cursor:pointer">
+                    <img src="tools/img/Socialicons/microsoft.jpeg" width="32" height="32" id="login_footer_linkedin" style="cursor:pointer">
                 </div>
 
                 <p class="login_footer_copyright">Copyright Peez&reg</p>
         </div>
         <!-- #Login -->
-        
-        
-        <!-- Dialog di login errata - Namespace: login_error -->
-        <div id="login_error" data-rel="dialog">
-            <div data-role="header">
-                <h1>Peez</h1>
-            </div>
-            
-            <div data-role="content">
-                <p>
-                    Errore di accesso!
-                </p>
-            </div>
-            
-            <div data-role="footer">
-                <h4>Copyright Peez&reg</h4>
-            </div>
-        </div>
-        <!-- #Dialog di login errata -->
         
     </body>
 </html>
