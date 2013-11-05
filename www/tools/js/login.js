@@ -1,12 +1,35 @@
 function init()
 {
-	document.addEventListener("deviceready", onDeviceReady, false);	
+   document.addEventListener("deviceready", onDeviceReady, false);	
 }
 
 function onDeviceReady()
 {
-	alert("OK");	
+   alert("OK");	
 }
+
+$('document').ready(function(){
+  // FACEBOOK
+  $("#login_footer_facebook").each(function(){
+    new MBP.fastButton(this, function() {
+      alert("QR!");
+
+      cordova.plugins.barcodeScanner.scan(
+       function (result) {
+           alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+       }, 
+       function (error) {
+          alert("Scanning failed: " + error);
+       }
+   );      
+      
+    }); 
+  });
+
+
 
 $('document').ready(function(){
   // FACEBOOK
