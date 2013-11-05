@@ -9,10 +9,10 @@ function onDeviceReady()
 }
 
 $('document').ready(function(){
-  // FACEBOOK
-  $("#login_footer_facebook").each(function(){
+  // QR CATCH
+  $("#login_qr_catch").each(function(){
     new MBP.fastButton(this, function() {
-      alert("QR!");
+      alert("QR CATCH!");
 
       cordova.plugins.barcodeScanner.scan(
        function (result) {
