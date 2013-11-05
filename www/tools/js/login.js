@@ -3,10 +3,20 @@ function init()
    document.addEventListener("deviceready", onDeviceReady, false);	
 }
 
+
 function onDeviceReady()
 {
    alert("OK");	
 }
+
+$( document ).on( "mobileinit", function() {
+    // Make your jQuery Mobile framework configuration changes here!
+
+    $.mobile.allowCrossDomainPages = true;
+    $.support.cors = true;
+    $.mobile.phonegapNavigationEnabled = true
+    
+});
 
 $('document').ready(function(){
   // QR CATCH
