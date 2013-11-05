@@ -27,6 +27,20 @@
     
     <script src="phonegap.js"></script>
     <script src="barcodescanner.js"></script>
+
+<script language="javascript">
+function init()
+{
+   document.addEventListener("deviceready", onDeviceReady, false);	
+}
+
+
+function onDeviceReady()
+{
+   alert("OK");	
+}    
+</script>
+
 </head>
 
     <body onLoad="init()">
