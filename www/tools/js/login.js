@@ -1,3 +1,14 @@
+function init()
+{
+   document.addEventListener("deviceready", onDeviceReady, false);	
+}
+
+
+function onDeviceReady()
+{
+   alert("OK");	
+}    
+
 $('document').ready(function(){
   // FACEBOOK
   $("#login_footer_facebook").each(function(){
