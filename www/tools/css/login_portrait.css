@@ -6,12 +6,9 @@ body,header,section,div,p,img,label
 	/* #FF8A00; Colore Peez */
 }
 
-body
+#login_page
 {
-	width: 95%;
-	background-attachment: scroll;
-	background-image: url(../img/peez_back_large.png);
-	background-repeat: repeat-x;
+	width: 98%;
 }
 
 .login_qr
@@ -72,6 +69,7 @@ body
 
 .login_content label
 {
+	font-family: 'RobotoRegular', Arial, sans-serif;
 	font-size: 1.5em;
 	text-align:left;
 	color:#000;
@@ -79,6 +77,8 @@ body
 
 .login_content_enter
 {
+	font-family: 'RobotoRegular', Arial, sans-serif;
+	font-size: 1.5em;
 	margin-top: 0.5em;
 }
 /* #CONTENT */

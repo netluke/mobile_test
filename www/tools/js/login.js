@@ -1,14 +1,3 @@
-function init()
-{
-   document.addEventListener("deviceready", onDeviceReady, false);	
-}
-
-
-function onDeviceReady()
-{
-   alert("OK");	
-}    
-
 $('document').ready(function(){
   // FACEBOOK
   $("#login_footer_facebook").each(function(){
@@ -153,6 +142,8 @@ function login()
 				// document.writeln(JSON.stringify(people2));		
 				// alert(people2["d"]["JSON"]);
 				alert(people3.token);
+				
+				sessionStorage.setItem("peopleToken", people3.token);
 			}			
 		}
 }

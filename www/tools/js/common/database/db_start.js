@@ -46,9 +46,9 @@ function initDB()
 
   // Creazione tabelle lingua.
   create_Tables1_Language(myDB);
-  create_Tables2_Reference(myDB);
-  create_Tables3_People(myDB);
-  create_Tables4_Media(myDB);
+  // create_Tables2_Reference(myDB);
+  // create_Tables3_People(myDB);
+  // create_Tables4_Media(myDB);
 
 
   systemDB = myDB;
