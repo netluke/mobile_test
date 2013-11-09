@@ -69,16 +69,14 @@ body,header,section,div,p,img,label
 
 .login_content label
 {
-	font-family: 'RobotoRegular', Arial, sans-serif;
 	font-size: 1.5em;
+	font-weight: bold;
 	text-align:left;
 	color:#000;
 }
 
 .login_content_enter
 {
-	font-family: 'RobotoRegular', Arial, sans-serif;
-	font-size: 1.5em;
 	margin-top: 0.5em;
 }
 /* #CONTENT */
