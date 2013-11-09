@@ -40,6 +40,7 @@ body,header,section,div,p,img,label
 .login_header_font
 {
     font-family: 'Comfortaa', Sans-Serif;
+    font-size: 1em;
 	color:#FF8A00;
 	position: absolute;
 	bottom: -30%;
@@ -53,6 +54,7 @@ body,header,section,div,p,img,label
 .login_content
 {
 	font-family: 'RobotoRegular', Arial, sans-serif;
+	font-size: 1em;
 	position: absolute;
 	top: 19%;
 	left: 20%;
@@ -96,7 +98,7 @@ body,header,section,div,p,img,label
 {
 	width: 100%;
 	font-family: 'RobotoRegular', Arial, sans-serif;
-	font-size: 0.8em;
+	font-size: 1em;
 	text-align: center;
 	position: absolute;
 	bottom: 0.5%;	
