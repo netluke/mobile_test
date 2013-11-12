@@ -57,13 +57,14 @@ $('document').ready(function(){
           alert("Scanning failed: " + error);
        }
 
+/*
    	   cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "peez/peez_qr.html", function(success) {
   	        alert("encode success: " + success);
   	      }, function(fail) {
   	        alert("encoding failed: " + fail);
   	      }
   	    );
-
+*/
      );      
     }); 
   });      
