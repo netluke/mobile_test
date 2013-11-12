@@ -40,7 +40,7 @@ body,header,section,div,p,img,label
 .login_header_font
 {
     font-family: 'Comfortaa', Sans-Serif;
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
 	color:#FF8A00;
 	position: absolute;
 	bottom: -30%;
