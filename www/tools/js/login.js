@@ -56,6 +56,14 @@ $('document').ready(function(){
        function (error) {
           alert("Scanning failed: " + error);
        }
+
+   	   cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "peez/peez_qr.html", function(success) {
+  	        alert("encode success: " + success);
+  	      }, function(fail) {
+  	        alert("encoding failed: " + fail);
+  	      }
+  	    );
+
      );      
     }); 
   });      
@@ -144,6 +152,8 @@ function login()
 				alert(people3.token);
 				
 				sessionStorage.setItem("peopleToken", people3.token);
+
+				$.mobile.navigate("reception/reception.html");
 			}			
 		}
 }
