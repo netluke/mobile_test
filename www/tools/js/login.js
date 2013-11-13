@@ -46,12 +46,22 @@ $('document').ready(function(){
   $("#login_qr_catch").each(function(){
     new MBP.fastButton(this, function() {
       alert("QR-CODE!");
+
       cordova.plugins.barcodeScanner.scan(
        function (result) {
            alert("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
+
+           // Estrazione codice peez
+           var stringa_qr = result.text;
+           var posizione_codice = stringa_qr.lastIndexOf("/");
+           var codice = stringa_qr.substr(posizione_codice);
+
+		   var qr = { value : codice };  // numero dopo l'ultimo slash
+
+		   var peez_obj;
        }, 
        function (error) {
           alert("Scanning failed: " + error);
@@ -69,6 +79,14 @@ $('document').ready(function(){
     }); 
   });      
 });
+
+
+
+
+
+
+
+
 
 
 function getXmlHttpObject()
