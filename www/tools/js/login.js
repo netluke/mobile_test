@@ -167,7 +167,7 @@ function login()
 				
 				var people3 = JSON.parse(people2["d"]["JSON"]);
 				// document.writeln(JSON.stringify(people2));		
-				// alert(people2["d"]["JSON"]);
+				alert(people2["d"]["JSON"]);
 				alert(people3.token);
 				
 				sessionStorage.setItem("peopleToken", people3.token);

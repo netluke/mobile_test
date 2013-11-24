@@ -29,7 +29,7 @@
         $('document').ready(function(){
 
           // QR-CODE
-          $("#login_qr_catch").each(function(){
+          $("#reception_qr_catch").each(function(){
             new MBP.fastButton(this, function() {
               alert("QR-CODE!");
               cordova.plugins.barcodeScanner.scan(
@@ -43,13 +43,40 @@
                   alert("Scanning failed: " + error);
                }
 
+
+             // Estrazione codice peez
+             var stringa_qr = result.text;
+             var posizione_codice = stringa_qr.lastIndexOf("/");
+             var codice = stringa_qr.substr(posizione_codice);
+
+             var qr = { value : codice };  // numero dopo l'ultimo slash
+
+             var peez_obj;
+
+
+             funcion callback(crud_result)
+             {
+               if(crud_result !== undefined && crud_result.errore === false) 
+               { 
+                 if (crud_result.success) 
+                   {
+                     peez_obj = JSON.parse(crud_result.JSON);
+
+                     // www.peez.it/coverer/(peez_obj.id)
+                   }
+               }
+             }
+
+// qr_retrive(qr, callback);
+
+/*
                cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "../peez/peez_qr.html", function(success) {
                     alert("encode success: " + success);
                   }, function(fail) {
                     alert("encoding failed: " + fail);
                   }
                 );
-
+*/
              );      
             }); 
           });      
@@ -75,7 +102,7 @@
                 </div><!-- /header -->                
                 
                 <div data-role="content" data-theme="a">
-                    <img class="qr_catch" src="../tools/img/qr/qr1.jpeg" width="96" height="96">
+                    <img class="qr_catch" id="reception_qr_catch" src="../tools/img/qr/qr1.jpeg" width="96" height="96">
                 </div>
 
                 <div data-role="footer" data-position="fixed" data-theme="a">
